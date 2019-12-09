@@ -16,10 +16,12 @@ invoke_hash() {
 }
 export -f invoke_hash
 
-for i in {1..1000}
+start_sleep=.4
+
+for i in {1..2000}
 do
   invoke_hash &
-  sleep .3
+  sleep $(bc <<< "scale=6;$start_sleep - $i * 0.0005" )
 done
 wait
 echo "FINISHED"

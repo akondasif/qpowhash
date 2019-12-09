@@ -9,7 +9,7 @@ functions:
     image: hcguersoy/qpowhash:0.1.0
     labels:
       com.openfaas.scale.max: 10
-      com.openfaas.scale.factor: 10
+      com.openfaas.scale.factor: 20
     limits:
       memory: 1024Mi
     requests:
