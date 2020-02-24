@@ -1,12 +1,13 @@
 version: 1.0
 provider:
   name: openfaas
-  gateway: http://127.0.0.1:8080
 functions:
   qpowhash:
     lang: dockerfile
     handler: ./
-    image: hcguersoy/qpowhash:0.1.0
+    image: registry.digitalocean.com/doks-reg/qpowhash:0.1.0
+    secrets:
+      - doks-reg
     labels:
       com.openfaas.scale.max: 10
       com.openfaas.scale.factor: 20
