@@ -15,4 +15,4 @@ functions:
     requests:
       memory: 512Mi
     environment:
-      max_inflight: "2"
+      max_inflight: "1"
