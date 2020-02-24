@@ -11,7 +11,7 @@ USER quarkus
 RUN mvn -f /usr/src/app/pom.xml -Pnative clean package
 
 # Use the image to copy watchdog instead of downloading using curl or add
-FROM openfaas/of-watchdog:0.7.2 as watchdog
+FROM openfaas/of-watchdog:0.7.6 as watchdog
 
 # Create the final docker image, containing the native executable(s)
 FROM debian:buster-slim

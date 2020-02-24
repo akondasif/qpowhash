@@ -5,14 +5,17 @@ functions:
   qpowhash:
     lang: dockerfile
     handler: ./
-    image: registry.digitalocean.com/doks-reg/qpowhash:0.1.0
+    image: registry.digitalocean.com/doks-reg/qpowhash:0.5.3
     secrets:
       - doks-reg
     labels:
       com.openfaas.scale.max: 10
       com.openfaas.scale.factor: 20
+    annotations:
+      topic: faas-request
     limits:
       memory: 1024Mi
+      cpu: 3
     requests:
       memory: 512Mi
     environment:
