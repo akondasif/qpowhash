@@ -5,7 +5,7 @@ functions:
   qpowhash:
     lang: dockerfile
     handler: ./
-    image: registry.digitalocean.com/doks-reg/qpowhash:0.5.3
+    image: registry.digitalocean.com/doks-reg/qpowhash:0.5.7
     secrets:
       - doks-reg
     labels:
